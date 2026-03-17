@@ -1,0 +1,10 @@
+{
+  "name": "sivaram-weds-sriharshita",
+  "version": "1.0.0",
+  "description": "Wedding Invitation — Siva Ram & Sri Harshita",
+  "scripts": {
+    "start": "node server.js",
+    "dev":   "node server.js"
+  },
+  "dependencies": {}
+}

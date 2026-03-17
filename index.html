@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Naveen Kumar&amp; Vasundhara — Wedding Invitation</title>
+  <meta name="description" content="You are cordially invited to the wedding of Naveen Kumar and Vasundhara on April 1, 2026 at Toshniwal Bhawan, Vizianagaram." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Cinzel:wght@400;500;600;700&family=Noto+Sans+Telugu:wght@300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/main.css" />
+  <style>
+   .weds-ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+  </style>
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════════════
+       AUDIO PLAYER
+  ═══════════════════════════════════════════════════════ -->
+  <div class="audio-bar" id="audioBar">
+    <button class="audio-btn" id="audioBtn" aria-label="Toggle music">
+      <span class="audio-icon" id="audioIcon">♪</span>
+      <span class="audio-label">Music</span>
+      <span class="audio-waves" id="audioWaves">
+        <span></span><span></span><span></span><span></span><span></span>
+      </span>
+    </button>
+    <audio id="bgAudio" loop>
+      <!-- Carnatic/classical wedding BGM - royalty free -->
+      <source src="audio/wedding-bgm.mp3" type="audio/mpeg" />
+    </audio>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════
+       LOADING SCREEN
+  ═══════════════════════════════════════════════════════ -->
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <div class="loader-om">&#9901</div>
+      <div class="loader-text">Loading Invitation…</div>
+      <div class="loader-bar"><div class="loader-progress" id="loaderProgress"></div></div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════
+       HERO SECTION
+  ═══════════════════════════════════════════════════════ -->
+  <section class="hero" id="hero">
+    <!-- Decorative petals -->
+    <div class="petals" aria-hidden="true">
+      <div class="petal" style="--i:1"></div>
+      <div class="petal" style="--i:2"></div>
+      <div class="petal" style="--i:3"></div>
+      <div class="petal" style="--i:4"></div>
+      <div class="petal" style="--i:5"></div>
+      <div class="petal" style="--i:6"></div>
+      <div class="petal" style="--i:7"></div>
+      <div class="petal" style="--i:8"></div>
+      <div class="petal" style="--i:9"></div>
+      <div class="petal" style="--i:10"></div>
+      <div class="petal" style="--i:11"></div>
+      <div class="petal" style="--i:12"></div>
+    </div>
+
+    <!-- Border frame -->
+    <div class="hero-frame" aria-hidden="true">
+      <div class="frame-corner tl"></div>
+      <div class="frame-corner tr"></div>
+      <div class="frame-corner bl"></div>
+      <div class="frame-corner br"></div>
+      <div class="frame-top"></div>
+      <div class="frame-bottom"></div>
+      <div class="frame-left"></div>
+      <div class="frame-right"></div>
+    </div>
+
+    <div class="hero-content">
+      <!-- Vinayaka -->
+      <div class="vinayaka-wrap reveal" data-delay="0">
+        <img 
+          src="Wedding couple.png"
+          alt="Lord Vinayaka"
+          class="vinayaka-img"
+          id="vinayakaImg"
+          onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 120%22%3E%3Ctext y=%2280%22 font-size=%2280%22 text-anchor=%22middle%22 x=%2250%22%3E🐘%3C/text%3E%3C/svg%3E'"
+        />
+      </div>
+
+      <!-- Ganesh sloka -->
+      <div class="ganesh-sloka reveal" data-delay="200">
+        <span class="sloka-bars">||</span> వివాహము అన్ని విషయములలో ఘనమైనది<span class="sloka-bars">||</span>
+      </div>
+
+      <!-- Ornamental divider -->
+      <div class="ornament reveal" data-delay="300" aria-hidden="true">
+        <div class="orn-line"></div>
+        <svg class="orn-svg" viewBox="0 0 120 24" fill="none">
+          <path d="M0 12 Q15 4 30 12 Q45 20 60 12 Q75 4 90 12 Q105 20 120 12" stroke="#C9952A" stroke-width="1.5" fill="none"/>
+          <circle cx="60" cy="12" r="4" fill="#C9952A"/>
+          <circle cx="30" cy="12" r="2.5" fill="#C9952A" opacity=".6"/>
+          <circle cx="90" cy="12" r="2.5" fill="#C9952A" opacity=".6"/>
+        </svg>
+        <div class="orn-line"></div>
+      </div>
+
+      <!-- Telugu heading -->
+      <h2 class="telugu-heading reveal" data-delay="400">శుభ వివాహ ఆహ్వానం</h2>
+      <p class="auspicious-sub reveal" data-delay="500">Auspicious Wedding Invitation</p>
+
+      <!-- Names -->
+    <div class="names-block">
+  <h1 class="bride-groom-name">Naveen Kumar</h1>
+
+  <div class="weds-ornament">
+    <div class="weds-line"></div>
+
+    <div class="weds-script">&</div>
+
+    <div class="weds-line"></div>
+  </div>
+
+  <h1 class="bride-groom-name">Vasundhara</h1>
+</div>
+
+      <!-- Tagline -->
+      <div class="hero-tagline reveal" data-delay="800">
+        <p class="tagline-en">Together with their families,</p>
+        <p class="tagline-en">invite you to celebrate their wedding</p>
+        <p class="tagline-te">మీ రాక మాకు ఆనందం</p>
+        <p class="tagline-quote">"Your presence brings us joy"</p>
+      </div>
+
+      <!-- Date badge -->
+      <div class="date-badge reveal" data-delay="900">
+        <div class="date-inner">
+          <span class="date-line date-month">April</span>
+          <span class="date-line date-num">01</span>
+          <span class="date-line date-year">2026</span>
+        </div>
+      </div>
+
+      <!-- Scroll cue -->
+      <div class="scroll-cue reveal" data-delay="1100" aria-hidden="true">
+        <span class="scroll-text">Scroll to explore</span>
+        <div class="scroll-arrow">
+          <div class="scroll-chevron"></div>
+          <div class="scroll-chevron"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       WEDDING DETAILS
+  ═══════════════════════════════════════════════════════ -->
+  <section class="section details-section" id="details">
+    <div class="section-inner">
+      <div class="section-head reveal-up">
+        <div class="section-lotus" aria-hidden="true">🪷</div>
+        <h2 class="section-title">Wedding Celebration</h2>
+        <p class="section-telugu">వివాహ వేడుక వివరాలు</p>
+        <div class="section-divider" aria-hidden="true"></div>
+      </div>
+
+      <div class="cards-row">
+
+        <div class="detail-card reveal-up" data-delay="100">
+          <div class="card-icon" aria-hidden="true">📅</div>
+          <h3 class="card-label">Date</h3>
+          <div class="card-main">Friday</div>
+          <div class="card-sub">April 1, 2026 (Dawn will be Thursday)</div>
+          <div class="card-telugu">ఏప్రిల్ 1, 2026 (తెల్లవారితే గురువారం)</div>
+        </div>
+
+        <div class="detail-card reveal-up" data-delay="200">
+          <div class="card-icon" aria-hidden="true">🌙</div>
+          <h3 class="card-label">Muhurtham</h3>
+          <div class="card-main">Evening</div>
+          <div class="card-sub">02:26 AM</div>
+          <div class="card-telugu">ముహూర్తం రాత్రి 02:26</div>
+        </div>
+
+        <div class="detail-card reveal-up" data-delay="300">
+          <div class="card-icon" aria-hidden="true">🏛️</div>
+          <h3 class="card-label">Venue</h3>
+          <div class="card-main">Atluri Basavayya Kalyana Mandapam</div>
+          <div class="card-sub">Function Hall</div>
+          <div class="card-sub small">Satyanarayanapuram, Gudivada</div>
+          <div class="card-telugu">ఆంధ్ర ప్రదేశ్</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       FAMILIES SECTION
+  ═══════════════════════════════════════════════════════ -->
+  <section class="section families-section" id="families">
+    <div class="section-inner">
+      <div class="section-head reveal-up">
+        <div class="section-lotus" aria-hidden="true">🌺</div>
+        <h2 class="section-title">Our Families</h2>
+        <p class="section-telugu">మా కుటుంబాలు</p>
+        <div class="section-divider" aria-hidden="true"></div>
+      </div>
+
+      <div class="families-row">
+
+        <!-- Groom family -->
+        <div class="family-card reveal-left" data-delay="100">
+          <div class="family-badge groom-badge">Groom</div>
+          <div class="family-mandap" aria-hidden="true">
+            <svg viewBox="0 0 80 30" width="80">
+              <path d="M5 28 L5 10 Q40 0 75 10 L75 28" stroke="#C9952A" stroke-width="1.2" fill="none"/>
+              <line x1="5" y1="28" x2="75" y2="28" stroke="#C9952A" stroke-width="1.2"/>
+            </svg>
+          </div>
+          <h3 class="family-name">Naveen Kumar</h3>
+          <p class="family-relation">Son of</p>
+          <div class="family-parents">
+            <p class="parent-name">Sri Viswanatham</p>
+            <p class="parent-name highlight">Sankaram</p>
+            <div class="parent-amp">&amp;</div>
+            <p class="parent-name">Smt. Viswanatham</p>
+            <p class="parent-name highlight">Kanaka Mahalakshmi</p>
+          </div>
+        </div>
+
+        <!-- Center floral divider -->
+        <div class="families-center reveal-up" data-delay="200" aria-hidden="true">
+          <div class="fc-line"></div>
+          <div class="fc-flower">
+            <svg viewBox="0 0 60 60" width="60">
+              <g transform="translate(30,30)">
+                <ellipse cx="0" cy="-14" rx="5" ry="10" fill="#C9952A" opacity=".7" transform="rotate(0)"/>
+                <ellipse cx="0" cy="-14" rx="5" ry="10" fill="#C9952A" opacity=".7" transform="rotate(45)"/>
+                <ellipse cx="0" cy="-14" rx="5" ry="10" fill="#C9952A" opacity=".7" transform="rotate(90)"/>
+                <ellipse cx="0" cy="-14" rx="5" ry="10" fill="#C9952A" opacity=".7" transform="rotate(135)"/>
+                <ellipse cx="0" cy="-14" rx="5" ry="10" fill="#C9952A" opacity=".7" transform="rotate(180)"/>
+                <ellipse cx="0" cy="-14" rx="5" ry="10" fill="#C9952A" opacity=".7" transform="rotate(225)"/>
+                <ellipse cx="0" cy="-14" rx="5" ry="10" fill="#C9952A" opacity=".7" transform="rotate(270)"/>
+                <ellipse cx="0" cy="-14" rx="5" ry="10" fill="#C9952A" opacity=".7" transform="rotate(315)"/>
+                <circle cx="0" cy="0" r="7" fill="#8B1A1A"/>
+              </g>
+            </svg>
+          </div>
+          <div class="fc-line"></div>
+        </div>
+
+        <!-- Bride family -->
+        <div class="family-card reveal-right" data-delay="100">
+          <div class="family-badge bride-badge">Bride</div>
+          <div class="family-mandap" aria-hidden="true">
+            <svg viewBox="0 0 80 30" width="80">
+              <path d="M5 28 L5 10 Q40 0 75 10 L75 28" stroke="#8B1A1A" stroke-width="1.2" fill="none"/>
+              <line x1="5" y1="28" x2="75" y2="28" stroke="#8B1A1A" stroke-width="1.2"/>
+            </svg>
+          </div>
+          <h3 class="family-name">Vasundhara</h3>
+          <p class="family-relation">Daughter of</p>
+          <div class="family-parents">
+            <p class="parent-name">Sri Siddani</p>
+            <p class="parent-name highlight">Hari Kumar</p>
+            <div class="parent-amp">&amp;</div>
+            <p class="parent-name">Smt. Siddani</p>
+            <p class="parent-name highlight">Sujatha</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       VENUE SECTION
+  ═══════════════════════════════════════════════════════ -->
+  <section class="section venue-section" id="venue">
+    <div class="venue-bg-pattern" aria-hidden="true"></div>
+    <div class="section-inner">
+      <div class="section-head reveal-up">
+        <div class="section-lotus" aria-hidden="true">🏛️</div>
+        <h2 class="section-title light">Venue</h2>
+        <p class="section-telugu light">వేదిక</p>
+        <div class="section-divider light" aria-hidden="true"></div>
+      </div>
+
+      <div class="venue-card reveal-up" data-delay="200">
+        <div class="venue-card-inner">
+          <div class="venue-icon-wrap" aria-hidden="true">
+            <svg viewBox="0 0 60 70" width="50" fill="none">
+              <!-- Gopuram style -->
+              <rect x="20" y="40" width="20" height="28" fill="#C9952A" rx="2"/>
+              <polygon points="30,5 10,40 50,40" fill="#8B1A1A"/>
+              <polygon points="30,15 15,40 45,40" fill="#C9952A" opacity=".8"/>
+              <polygon points="30,25 20,40 40,40" fill="#8B1A1A" opacity=".7"/>
+              <rect x="25" y="52" width="10" height="16" fill="#3b1508" rx="1"/>
+              <circle cx="30" cy="5" r="4" fill="#C9952A"/>
+            </svg>
+          </div>
+          <h3 class="venue-name">Atluri Basavayya Kalyana Mandapam</h3>
+          <p class="venue-addr">Satyanarayanapuram, Gudivada</p>
+          <p class="venue-addr">Andhra Pradesh, India</p>
+          <a 
+            href="https://maps.app.goo.gl/nTZR9LJWS3PzyXmx5?g_st=aw"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="directions-btn"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+            </svg>
+            Get Directions
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       COUNTDOWN
+  ═══════════════════════════════════════════════════════ -->
+  <section class="section countdown-section" id="countdown">
+    <div class="section-inner">
+      <div class="section-head reveal-up">
+        <div class="section-lotus" aria-hidden="true">⏳</div>
+        <h2 class="section-title">Counting Down To Our Special Day</h2>
+        <p class="section-telugu">మా ప్రత్యేక రోజు కోసం వేచి చూస్తున్నాం</p>
+        <div class="section-divider" aria-hidden="true"></div>
+      </div>
+
+      <div class="countdown-wrap reveal-up" data-delay="200">
+        <div class="countdown-grid" id="countdownGrid">
+          <div class="countdown-unit">
+            <div class="countdown-flip" id="flipDays">
+              <span class="countdown-number" id="days">--</span>
+            </div>
+            <div class="countdown-label">Days</div>
+          </div>
+          <div class="countdown-colon">:</div>
+          <div class="countdown-unit">
+            <div class="countdown-flip" id="flipHours">
+              <span class="countdown-number" id="hours">--</span>
+            </div>
+            <div class="countdown-label">Hours</div>
+          </div>
+          <div class="countdown-colon">:</div>
+          <div class="countdown-unit">
+            <div class="countdown-flip" id="flipMinutes">
+              <span class="countdown-number" id="minutes">--</span>
+            </div>
+            <div class="countdown-label">Minutes</div>
+          </div>
+          <div class="countdown-colon">:</div>
+          <div class="countdown-unit">
+            <div class="countdown-flip" id="flipSeconds">
+              <span class="countdown-number" id="seconds">--</span>
+            </div>
+            <div class="countdown-label">Seconds</div>
+          </div>
+        </div>
+
+        <div class="married-msg" id="marriedMsg" style="display:none">
+          <div class="married-icon">🎊</div>
+          <h3 class="married-title">We Are Married!</h3>
+          <p class="married-telugu">మేము వివాహం చేసుకున్నాము!</p>
+          <div class="confetti-wrap" id="confettiWrap"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════════════════ -->
+  <footer class="footer" id="footer">
+    <div class="footer-pattern" aria-hidden="true"></div>
+    <div class="footer-inner">
+
+      <!-- Top floral -->
+      <div class="footer-floral reveal-up" aria-hidden="true">
+        <svg viewBox="0 0 300 40" width="300" fill="none">
+          <path d="M10 20 Q75 5 150 20 Q225 35 290 20" stroke="#C9952A" stroke-width="1" opacity=".6"/>
+          <path d="M10 20 Q75 35 150 20 Q225 5 290 20" stroke="#C9952A" stroke-width="1" opacity=".4"/>
+          <circle cx="150" cy="20" r="5" fill="#C9952A" opacity=".8"/>
+          <circle cx="75" cy="12" r="3" fill="#C9952A" opacity=".5"/>
+          <circle cx="225" cy="28" r="3" fill="#C9952A" opacity=".5"/>
+        </svg>
+      </div>
+
+      <div class="footer-blessings reveal-up" data-delay="100">
+        <span class="blessing">శ్రీరస్తు</span>
+        <div class="blessing-dot"></div>
+        <span class="blessing">శుభమస్తు</span>
+      </div>
+
+      <div class="footer-names reveal-up" data-delay="200">
+        Naveen Kumar&amp; Vasundhara
+      </div>
+
+      <div class="footer-date reveal-up" data-delay="300">
+        April 01, 2026
+      </div>
+
+      <div class="footer-bottom reveal-up" data-delay="400">
+        <span>Made with</span>
+        <span class="heart">♥</span>
+        <span>love</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>
