@@ -1,8 +1,3 @@
-/* ═══════════════════════════════════════════════════════════
-   WEDDING INVITATION — EXACT CLONE CSS
-   Siva Ram & Sri Harshita
-═══════════════════════════════════════════════════════════ */
-
 /* ─── DESIGN TOKENS ─────────────────────────────────────── */
 :root {
   --gold:         #C9952A;
@@ -552,17 +547,16 @@ a { text-decoration: none; color: inherit; }
   margin-bottom: 4px;
 }
 .card-sub {
-  font-size: 1.05rem;
-  color: var(--text-dark);
+  font-size: 1.25rem;
+  color: var(--brown-dark);
   line-height: 1.5;
 }
-.card-sub.small { font-size: 0.85rem; color: var(--brown-text); }
+.card-sub.small { font-size: 0.85rem; color: var(--brown-dark); }
 .card-telugu {
   font-family: var(--font-telugu);
   font-size: 0.85rem;
   color: var(--gold);
   margin-top: 10px;
-  opacity: 0.8;
 }
 
 /* ─── FAMILIES SECTION ───────────────────────────────────── */
