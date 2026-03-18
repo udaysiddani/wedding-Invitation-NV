@@ -952,7 +952,17 @@ a { text-decoration: none; color: inherit; }
   .date-inner { padding: 12px 28px; }
   .section { padding: 70px 16px; }
 }
+/* FIX: force correct date display on mobile */
+@media (max-width: 768px) {
+  .detail-card .card-sub {
+    content: none !important;
+    font-size: 1.1rem;
+  }
 
+  .card-icon {
+    display: none; /* prevents emoji overlap bug on mobile */
+  }
+}
 /* ─── SELECTION ──────────────────────────────────────────── */
 ::selection { background: rgba(201,149,42,0.3); color: var(--text-dark); }
 
